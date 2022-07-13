@@ -5,10 +5,42 @@
   --first-title-color: #ffffff;
   --second-title-color: #303030;
   --accent-color: #ff6c00;
+  --typical-margin: 20px;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
 }
 
 .link {
@@ -16,6 +48,14 @@ body {
 }
 .list {
   list-style: none;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 2px solid red;
 }
 
 .visually-hidden {
@@ -61,14 +101,17 @@ body {
   letter-spacing: 0.05em;
 }
 
-/*--------------- HEADER-------------- */
-
-.hero {
-  background-color: #978e8e;
+.section {
+  padding-top: 130px;
+  padding-bottom: 130px;
 }
+
+/*--------------- HEADER-------------- */
 
 .header {
   background-color: gray;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-link,
@@ -93,6 +136,13 @@ body {
 }
 
 /*--------------- HERO-------------- */
+.hero {
+}
+
+.hero-content {
+  background-color: #454040;
+  padding: 272px 100px 206px;
+}
 
 .hero-link {
   font-weight: 600;
@@ -101,8 +151,9 @@ body {
   letter-spacing: 0.2em;
   color: #303030;
 }
-.pre-title {
+.hero-pre-title {
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: var(--typical-margin);
 }
 
 .hero-title {
@@ -112,28 +163,34 @@ body {
   line-height: calc(85 / 72);
   letter-spacing: 0.05em;
   color: #ffffff;
+  margin-bottom: var(--typical-margin);
 }
 .hero-after-title {
   color: #9da4bd;
+  max-width: 360px;
 }
 
 /*--------------- ABOUT-------------- */
 
 .about-pre-title {
   color: #303030;
+  margin-bottom: var(--typical-margin);
 }
 
 .about-title {
   color: var(--second-title-color);
+  margin-bottom: var(--typical-margin);
 }
 .about-after-title {
   color: #555555;
+  margin-bottom: var(--typical-margin);
 }
 .about-text {
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.02em;
   color: #555555;
+  margin-bottom: 40px;
 }
 
 .about-btn {
@@ -148,9 +205,20 @@ body {
 
 .prices-pre-title {
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: var(--typical-margin);
 }
 .prices-title {
   color: var(--first-title-color);
+  margin-bottom: 44px;
+}
+
+.prices-list {
+  border: 1px solid #ffffff;
+  padding: 30px 40px;
+}
+
+.prices-item {
+  margin-bottom: var(--typical-margin);
 }
 
 .prices-item-text {
@@ -162,6 +230,8 @@ body {
 
 .prices-btn {
   color: var(--first-btn-color);
+  display: block;
+  margin: 50px auto 0;
 }
 
 /*--------------- BENEFITS-------------- */
@@ -184,6 +254,13 @@ body {
   color: var(--accent-color);
 }
 
+.benefits-item {
+  width: 170px;
+  height: 133px;
+  border: 1px solid #000000;
+  padding: 20px 24px;
+}
+
 .benefits-item-text {
   font-weight: 600;
   font-size: 11px;
@@ -194,10 +271,132 @@ body {
 
 .benefits-pre-title {
   color: #303030;
+  margin-bottom: 20px;
 }
 .benefits-title {
   color: #303030;
+  margin-bottom: 20px;
 }
 .benefits-after-title {
   color: #555555;
+}
+
+/*--------------- BARBERS-------------- */
+
+.barbers-pre-title {
+  color: #303030;
+  margin-bottom: var(--typical-margin);
+}
+
+.barbers-title {
+  color: var(--second-title-color);
+  margin-bottom: 44px;
+}
+
+.barbers-item-wrap {
+  padding: 30px 10px 0;
+}
+
+.barbers-item-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #303030;
+  margin-bottom: 8px;
+}
+
+.barbers-item-text {
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ff6c00;
+}
+
+/*--------------- GALLERY-------------- */
+
+.gallery-pre-title {
+  color: #303030;
+  margin-bottom: 44px;
+}
+
+/*--------------- ONLINE-------------- */
+
+.online {
+  background-color: #000000;
+}
+
+.online-title {
+  color: var(--first-title-color);
+}
+
+/*--------------- CONTACTS-------------- */
+
+.contacts {
+  background-color: #000000;
+}
+
+.contacts-title {
+  color: var(--first-title-color);
+  margin-bottom: 40px;
+}
+
+.contacts-address {
+  max-width: 270px;
+  margin-bottom: 70px;
+}
+.contacts-address-item {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+  margin-bottom: var(--typical-margin);
+}
+
+.contacts-item {
+  margin-bottom: var(--typical-margin);
+}
+.contacts-link {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.contacts-bottom-text {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.contacts-time {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+
+  color: #9da4bd;
+}
+
+/*--------------- FOOTER-------------- */
+.footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.footer-copy {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #9da4bd;
+}
+
+.footer-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #303030;
 }
