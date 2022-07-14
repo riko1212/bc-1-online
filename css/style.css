@@ -80,12 +80,17 @@ img {
 }
 
 .btn {
+  height: 40px;
+  min-width: 160px;
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  background-color: transparent;
 }
 
 .after-title {
@@ -114,6 +119,27 @@ img {
   padding-bottom: 32px;
 }
 
+.header-logo {
+  margin-right: 70px;
+}
+
+.header > .container {
+  display: flex;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+}
+
+.header-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.header-connect {
+  margin-left: auto;
+}
+
 .header-link,
 .header-tel {
   font-weight: 600;
@@ -133,15 +159,21 @@ img {
 
 .header-btn {
   color: var(--first-btn-color);
+  margin-left: 45px;
 }
 
 /*--------------- HERO-------------- */
-.hero {
+.hero > .container {
+  display: flex;
 }
-
 .hero-content {
+  flex-grow: 1;
   background-color: #454040;
   padding: 272px 100px 206px;
+}
+
+.hero-list {
+  width: 100px;
 }
 
 .hero-link {
@@ -171,6 +203,22 @@ img {
 }
 
 /*--------------- ABOUT-------------- */
+
+.about > .container {
+  display: flex;
+}
+
+.about-content {
+  max-width: 500px;
+}
+.about-list {
+  display: flex;
+  margin-right: 64px;
+}
+
+.about-item + .about-item {
+  margin-left: 30px;
+}
 
 .about-pre-title {
   color: #303030;
@@ -203,6 +251,10 @@ img {
   background-color: #303030;
 }
 
+.prices-wrap {
+  display: flex;
+}
+
 .prices-pre-title {
   color: rgba(157, 164, 189, 0.6);
   margin-bottom: var(--typical-margin);
@@ -215,10 +267,15 @@ img {
 .prices-list {
   border: 1px solid #ffffff;
   padding: 30px 40px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
 }
 
 .prices-item {
-  margin-bottom: var(--typical-margin);
+  display: flex;
+  justify-content: space-between;
 }
 
 .prices-item-text {
@@ -235,7 +292,45 @@ img {
 }
 
 /*--------------- BENEFITS-------------- */
+.benefits {
+  padding-top: 121px;
+}
 
+.benefits > .container {
+  display: flex;
+}
+
+.benefits-content {
+  max-width: 500px;
+  padding-top: 9px;
+}
+
+.benefits-cards {
+  width: calc(50% - 15px);
+  margin-right: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.benefits-list {
+  width: 370px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.benefits-item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.benefits-item:nth-child(even) {
+  margin-top: 30px;
+}
+
+.benefits-item-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 .benefits-item span {
   font-weight: 700;
   font-size: 42px;
@@ -252,6 +347,7 @@ img {
   line-height: calc(22 / 16);
   text-align: center;
   color: var(--accent-color);
+  margin-top: 8px;
 }
 
 .benefits-item {
@@ -315,6 +411,14 @@ img {
   color: #ff6c00;
 }
 
+.barbers-list {
+  display: flex;
+  gap: 30px;
+}
+.barbers-item {
+  width: calc((100% - 60px) / 3);
+}
+
 /*--------------- GALLERY-------------- */
 
 .gallery-pre-title {
@@ -322,10 +426,39 @@ img {
   margin-bottom: 44px;
 }
 
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.gallery-item {
+  flex-basis: calc((100% - 90px) / 4);
+}
+
+/* .gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.gallery-item {
+  flex-basis: calc(100% / 4 - 30px);
+  margin: 15px;
+} */
+
+.contacts-wrap {
+  background-color: #000000;
+}
+
+.contacts-wrap .container {
+  display: flex;
+}
+
 /*--------------- ONLINE-------------- */
 
 .online {
-  background-color: #000000;
+  width: calc(50% + 15px);
 }
 
 .online-title {
@@ -335,7 +468,8 @@ img {
 /*--------------- CONTACTS-------------- */
 
 .contacts {
-  background-color: #000000;
+  width: calc(50% - 15px);
+  padding-left: 100px;
 }
 
 .contacts-title {
@@ -385,6 +519,12 @@ img {
   padding-bottom: 56px;
 }
 
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .footer-copy {
   font-weight: 600;
   font-size: 11px;
@@ -399,4 +539,9 @@ img {
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: #303030;
+}
+
+.footer-list {
+  display: flex;
+  gap: 40px;
 }
